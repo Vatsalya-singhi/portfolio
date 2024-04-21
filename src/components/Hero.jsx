@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
-import {useGSAP} from '@gsap/react';
+import { useGSAP } from '@gsap/react';
 
 const Hero = () => {
 
-    useGSAP(()=>{
-        gsap.to('#hero', {opacity: 1, delay: 1.5 })
-    },[])
+    useGSAP(() => {
+        gsap.to('#hero', { opacity: 1, delay: 1.5 });
+    }, [])
 
     return (
         <section className="w-full nav-height bg-black relative">
