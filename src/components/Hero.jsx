@@ -42,7 +42,7 @@ const Hero = () => {
             <div id="footer" className="flex flex-col items-center justify-center opacity-0 pt-2">
                 <p>Know More</p>
                 <div className="text-white pt-2">
-                    <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
                 </div>
