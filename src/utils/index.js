@@ -2,23 +2,14 @@ import iconIMG from "/assets/images/icon.svg"
 import header_iconIMG from "/assets/images/header_icon.svg"
 import barIMG from "/assets/images/bars-4.svg"
 
-import user from "/assets/images/user.svg"
-import briefcase from "/assets/images/briefcase.svg"
-import graduation from "/assets/images/graduation.svg"
-import tasks from "/assets/images/tasks.svg"
-import comments from "/assets/images/comments.svg"
-import publication from "/assets/images/publication.svg"
-import contact from "/assets/images/contact.svg"
-
+import herobg1IMG from "/assets/images/hero-bg-1.jpg";
+import herobg2IMG from "/assets/images/hero-bg-2.jpg";
+import herobg3IMG from "/assets/images/hero-bg-3.jpg";
 
 export const icon = iconIMG;
 export const header_icon = header_iconIMG;
 export const hamburger = barIMG;
 
-export const userSVG = user;
-export const briefcaseSVG = briefcase;
-export const graduationSVG = graduation;
-export const tasksSVG = tasks;
-export const commentsSVG = comments;
-export const publicationSVG = publication;
-export const contactSVG = contact;
+export const herobg1 = herobg1IMG;
+export const herobg2 = herobg2IMG;
+export const herobg3 = herobg3IMG;

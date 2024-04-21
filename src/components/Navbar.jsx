@@ -77,15 +77,15 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="px-3 py-5 w-full flex items-center justify-between relative">
-                <nav className="flex items-center justify-between w-full screen-max-width">
+            <header className="w-full flex items-center justify-between sticky top-0 z-50">
+                <nav className="flex items-center justify-between w-full screen-max-width bg-black px-3 py-5">
                     {/* big screen */}
                     <div className="flex-none block max-md:hidden cursor-pointer text-xl text-white transition-all" title="Vatsalya Singhi">
                         &lt;VS/&gt;
                     </div>
                     {/* small screen */}
                     <div className="flex-none hidden max-md:block cursor-pointer text-xl text-white transition-all" title="Vatsalya Singhi">
-                        Vatsalya Singhi
+                    &lt;VS/&gt;
                     </div>
                     {/* big screen */}
                     <div className="flex-1 block max-md:hidden">
