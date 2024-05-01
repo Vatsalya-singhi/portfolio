@@ -14,9 +14,10 @@ const AboutMe = () => {
     ];
 
     return (
-        <section id="AboutMe" className="w-full nav-height bg-black relative screen-max-width">
+        <section id="AboutMe" className="w-full nav-height bg-zinc relative screen-max-width">
 
-            <div className="h-5/6 w-full rounded-lg flex items-center justify-center md:justify-start md:px-10">
+            {/* md:px-10 */}
+            <div className="h-5/6 w-full rounded-lg flex items-center justify-center md:justify-start">
 
                 <div className="w-full h-full flex flex-col justify-between md:w-1/2 max-md:px-5">
 
