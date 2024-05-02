@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
+import BentoGrid from './components/BentoGrid';
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             <Hero />
             <AboutMe />
             <Experience />
+            <BentoGrid />
         </main>
     )
 }
