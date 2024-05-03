@@ -21,14 +21,13 @@ const Contact = () => {
     };
 
     return (
-
-        <div className="w-full max-w-sm p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
+        <div className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
 
             <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 Connect with Me
             </h3>
 
-            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            <time className="mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 flex items-center gap-1 pt-1">
                 Stay updated with my latest projects & thoughts
             </time>
 

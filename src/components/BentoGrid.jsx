@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Contact from './helpers/Contact';
+import Education from './helpers/Education';
+import Languages from './helpers/Languages';
+import Tech from './helpers/Tech';
 
 const BentoGrid = () => {
 
@@ -18,9 +21,15 @@ const BentoGrid = () => {
                     <div className="bg-black rounded-b-lg">
                         <Contact />
                     </div>
-                    <div className="bg-black">Grid Item 2</div>
-                    <div className="bg-black">Grid Item 3</div>
-                    <div className="bg-black">Grid Item 4</div>
+                    <div className="bg-black">
+                        <Education />
+                    </div>
+                    <div className="bg-black">
+                        <Languages />
+                    </div>
+                    <div className="bg-black">
+                        <Tech />
+                    </div>
                     <div className="bg-black">Grid Item 5</div>
                     {/* Add more grid items as needed */}
                 </div>

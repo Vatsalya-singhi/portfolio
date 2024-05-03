@@ -5,7 +5,10 @@ import { useGSAP } from '@gsap/react';
 
 // languages - list of buttons
 const Languages = () => {
-
+    return (
+        <>
+        </>
+    )
 }
 
 export default Languages;
