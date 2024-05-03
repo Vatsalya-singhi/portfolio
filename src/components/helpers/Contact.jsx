@@ -5,15 +5,12 @@ import { useGSAP } from '@gsap/react';
 
 const Contact = () => {
 
-
     const [isHovered, setIsHovered] = useState([false, false, false]);
-
     const handleMouseEnter = (index) => {
         let arr = [...isHovered];
         arr[index] = true;
         setIsHovered(arr);
     };
-
     const handleMouseLeave = (index) => {
         let arr = [...isHovered];
         arr[index] = false;

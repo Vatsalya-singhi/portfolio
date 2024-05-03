@@ -9,6 +9,7 @@ import herobg3IMG from "/assets/images/hero-bg-3.jpg";
 
 // import aboutMeIMG from "/assets/images/aboutme.jpg";
 import aboutMeIMG from "/assets/images/aboutme.png";
+import no_avatarIMG from "/assets/images/no_avatar.svg";
 
 export const icon = iconIMG;
 export const header_icon = header_iconIMG;
@@ -20,3 +21,5 @@ export const herobg2 = herobg2IMG;
 export const herobg3 = herobg3IMG;
 
 export const aboutmebg = aboutMeIMG;
+
+export const no_avatar = no_avatarIMG;

@@ -43,7 +43,7 @@ const Tech = () => {
                 <span>My Stack</span>
             </time>
 
-            <ul className="my-4 space-y-3">
+            <ul className="my-4 space-y-3 h-80 overflow-scroll no-scrollbar">
 
                 {
                     techList.map(({ tech, expertise, color, icon }, index) => (
