@@ -43,8 +43,7 @@ const Tech = () => {
                 <span>My Stack</span>
             </time>
 
-            <ul className="my-4 space-y-3 h-80 overflow-scroll no-scrollbar">
-
+            <ul className="my-4 space-y-3">
                 {
                     techList.map(({ tech, expertise, color, icon }, index) => (
                         <Fragment key={index}>
@@ -58,7 +57,6 @@ const Tech = () => {
                         </Fragment>
                     ))
                 }
-
             </ul>
 
         </div>

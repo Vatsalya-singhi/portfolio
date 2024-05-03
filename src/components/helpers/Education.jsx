@@ -33,7 +33,6 @@ const Education = () => {
             </h3>
 
             <ul className="my-4 space-y-3">
-
                 {EducationList.map(({ college, degree, location, link, fromDate, toDate }, index) => (
                     <li key={index}
                         className={`w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ${(index == EducationList.length - 1) ? "mb-1" : "mb-5"}`}>
@@ -45,7 +44,6 @@ const Education = () => {
                         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{location}</time>
                     </li>
                 ))}
-
             </ul>
 
         </div>

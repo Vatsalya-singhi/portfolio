@@ -42,7 +42,7 @@ const Testimonials = () => {
                 {
                     testimonialList.map(({ name, position, date, message, image }, index) => (
                         <figure key={index} className="flex flex-col items-center justify-center p-8 text-center bg-zinc rounded-lg">
-                            <blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 h-40 overflow-scroll no-scrollbar">
+                            <blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 h-48 overflow-scroll no-scrollbar">
                                 <time className="block mb-2 text-sm font-normal leading-normal text-left text-gray-400 dark:text-gray-500" title={message}>{message}</time>
                             </blockquote>
                             <figcaption className="flex items-center justify-center">
