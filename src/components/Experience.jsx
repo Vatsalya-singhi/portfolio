@@ -87,27 +87,33 @@ const Experience = () => {
                             {ExperienceList.map(({ company, role, location, link, date, description, skillTags }, index) => (
                                 <li key={index}
                                     className={`w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ms-6 ${(index == ExperienceList.length - 1) ? "mb-1" : "mb-5"}`}>
-                                    <span className="absolute flex items-center justify-center w-6 h-6 bg-white-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-white-900">
-                                        <svg className="w-2.5 h-2.5 text-white-800 dark:text-white-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <span className="absolute flex items-center justify-center w-6 h-6 bg-white-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-white-900 bg-black">
+                                        <svg className="w-2.5 h-2.5 text-white-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                         </svg>
                                     </span>
-                                    <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                                    <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
                                         {role}
                                         {
                                             index == 0 &&
-                                            (<span className="ms-3 px-1 bg-white-100 text-white-800 text-sm font-medium rounded dark:bg-white-900 dark:text-white-300 leading-7">
+                                            (<span className="ms-3 px-1 bg-white-100 text-white-800 text-sm font-medium rounded text-white leading-7">
                                                 (Present)
                                             </span>)
                                         }
                                     </h3>
-                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{company} · {date}</time>
-                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{location}</time>
-                                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{description}</p>
-                                    <div>
+                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{company} · {date}</time>
+                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
+                                    <p className="mb-4 text-base font-normal text-gray-500">{description}</p>
+                                    <div className="max-sm:hidden">
                                         {
                                             skillTags.map((skill, index) => (
-                                                <a key={index} href="#" className="mr-4 mb-2 px-4 py-2 inline-flex items-center text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-white-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-white-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+                                                <a key={index} href="#"
+                                                    className="mr-4 mb-2 px-4 py-2 inline-flex items-center text-sm font-medium 
+                                                border 
+                                                rounded-lg 
+                                                hover:text-white-700 
+                                                focus:z-10 focus:ring-4 focus:outline-none focus:text-white-700
+                                                bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700">
                                                     {skill}
                                                 </a>
                                             ))
