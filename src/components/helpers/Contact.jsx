@@ -18,7 +18,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
+        <div id="Contact" className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
 
             <h3 className="flex items-center mb-1 text-lg font-semibold text-white gap-3 pb-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

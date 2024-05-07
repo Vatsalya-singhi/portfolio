@@ -57,7 +57,7 @@ const AboutMe = () => {
 
                 </div>
 
-                <div className="w-full h-full md:w-1/2 bg-cover bg-no-repeat bg-center max-md:bg-none max-md:hidden"
+                <div className="w-full h-full md:w-1/2 bg-contain bg-no-repeat bg-center max-md:bg-none max-md:hidden"
                     style={{ backgroundImage: `url(${aboutmebg})` }}>
                 </div>
 

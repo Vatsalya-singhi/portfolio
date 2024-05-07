@@ -62,7 +62,7 @@ const Testimonials = () => {
 
     return (
 
-        <div className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
+        <div id="Testimonials" className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
 
             <h3 className="flex items-center mb-1 text-lg font-semibold text-white gap-3 pb-1">
                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -73,14 +73,12 @@ const Testimonials = () => {
 
             <div id="default-carousel" className="relative w-full my-4 rounded-lg shadow-sm " data-carousel="static">
                 {/* Carousel wrapper */}
-                <div className="relative h-56 overflow-hidden rounded-lg md:h-96 min-h-max">
+                <div className="relative h-96 overflow-hidden rounded-lg">
                     {
                         testimonialList.map(({ name, position, date, message, image }, index) => (
                             <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">
-                                <figure key={index} className="flex flex-col-reverse items-center justify-center px-3 py-4 text-center bg-zinc rounded-lg">
-                                    <blockquote className="max-w-2xl mx-auto mb-2 flex-1 overflow-scroll no-scrollbar">
-                                        <time className="h-fit block mb-2 text-sm font-normal leading-normal text-left text-gray-400 dark:text-gray-500" title={message}>{message}</time>
-                                    </blockquote>
+                                <figure key={index} className="flex flex-col items-center justify-center px-3 py-4 text-center bg-zinc rounded-lg h-full">
+
                                     <figcaption className="flex items-center justify-center mb-3">
                                         <img className="rounded-full w-9 h-9" src={image} alt="profile picture" title={name} />
                                         <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
@@ -89,6 +87,12 @@ const Testimonials = () => {
                                             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 capitalize">{date}</time>
                                         </div>
                                     </figcaption>
+
+                                    <blockquote className="max-w-2xl mx-auto mb-2 flex-1 overflow-scroll no-scrollbar">
+                                        <time className="h-60 block mb-2 text-sm font-normal leading-normal text-left text-gray-400 dark:text-gray-500" title={message}>{message}</time>
+                                    </blockquote>
+
+
                                 </figure>
                             </div>
                         ))
