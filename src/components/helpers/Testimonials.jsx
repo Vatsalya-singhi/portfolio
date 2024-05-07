@@ -73,7 +73,7 @@ const Testimonials = () => {
 
             <div id="default-carousel" className="relative w-full my-4 rounded-lg shadow-sm " data-carousel="static">
                 {/* Carousel wrapper */}
-                <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div className="relative h-56 overflow-hidden rounded-lg md:h-96 min-h-max">
                     {
                         testimonialList.map(({ name, position, date, message, image }, index) => (
                             <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">

@@ -58,7 +58,7 @@ const Tech = () => {
             </h3>
 
             <>
-                <div className="mb-4">
+                <div className="mb-0">
                     <ul className="text-sm font-medium text-left whitespace-nowrap overflow-x-auto overflow-y-hidden" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" data-tabs-active-classes="text-white" data-tabs-inactive-classes="text-gray">
                         {
                             Object.keys(techList).map((type, index) => {
@@ -95,10 +95,9 @@ const Tech = () => {
                                     role="tabpanel"
                                     aria-labelledby={`${str}-tab`}
                                 >
-
-                                    <div className="my-4 gap-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-60 overflow-scroll no-scrollbar">
+                                    <div className="gap-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 overflow-scroll no-scrollbar">
                                         {
-                                            arr.map(({ tech, expertise }, j) => (
+                                            arr.map(({ tech, expertise }) => (
                                                 <div key={tech}>
                                                     <div className="flex justify-between mb-1">
                                                         <span className="text-base font-medium text-blue-700 dark:text-white capitalize" title={tech}>{tech}</span>
