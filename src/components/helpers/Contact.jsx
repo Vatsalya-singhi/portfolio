@@ -5,16 +5,47 @@ import { useGSAP } from '@gsap/react';
 
 const Contact = () => {
 
-    const [isHovered, setIsHovered] = useState([false, false, false, false]);
+    // const [isHovered, setIsHovered] = useState([false, false, false, false]);
+    const [isLinkedin, setIsLinkedin] = useState(false);
+    const [isGithub, setIsGithub] = useState(false);
+    const [isMedium, setIsMedium] = useState(false);
+    const [isGmail, setIsGmail] = useState(false);
+
     const handleMouseEnter = (index) => {
-        let arr = [...isHovered];
-        arr[index] = true;
-        setIsHovered(arr);
+        switch (index) {
+            case 0:
+                setIsLinkedin(true);
+                break;
+            case 1:
+                setIsGithub(true);
+                break;
+            case 2:
+                setIsMedium(true);
+                break;
+            case 3:
+                setIsGmail(true);
+                break;
+            default:
+                break;
+        }
     };
     const handleMouseLeave = (index) => {
-        let arr = [...isHovered];
-        arr[index] = false;
-        setIsHovered(arr);
+        switch (index) {
+            case 0:
+                setIsLinkedin(false);
+                break;
+            case 1:
+                setIsGithub(false);
+                break;
+            case 2:
+                setIsMedium(false);
+                break;
+            case 3:
+                setIsGmail(false);
+                break;
+            default:
+                break;
+        }
     };
 
     return (
@@ -44,7 +75,7 @@ const Contact = () => {
                         <span className="tracking-wide flex-1 ms-3 whitespace-nowrap overflow-clip text-md font-semibold text-white">@vatsalyasinghi</span>
 
                         <span className="max-lg:hidden inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isHovered[0] ? "visible" : "invisible"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isLinkedin ? "visible" : "invisible"}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                             </svg>
                         </span>
@@ -66,7 +97,7 @@ const Contact = () => {
                         <span className="tracking-wide flex-1 ms-3 whitespace-nowrap overflow-clip text-md font-semibold text-white">@Vatsalya-singhi</span>
 
                         <span className="max-lg:hidden inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isHovered[1] ? "visible" : "invisible"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isGithub ? "visible" : "invisible"}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                             </svg>
                         </span>
@@ -88,7 +119,7 @@ const Contact = () => {
                         <span className="tracking-wide flex-1 ms-3 whitespace-nowrap overflow-clip text-md font-semibold text-white">@vatsalya-singhi4316</span>
 
                         <span className="max-lg:hidden inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isHovered[2] ? "visible" : "invisible"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isMedium ? "visible" : "invisible"}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                             </svg>
                         </span>
@@ -110,7 +141,7 @@ const Contact = () => {
                         <span className="tracking-wide flex-1 ms-3 whitespace-nowrap overflow-clip text-md font-semibold text-white">@vatsalya.singhi</span>
 
                         <span className="max-lg:hidden inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isHovered[3] ? "visible" : "invisible"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className={`w-6 h-6 ${isGmail ? "visible" : "invisible"}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                             </svg>
                         </span>
