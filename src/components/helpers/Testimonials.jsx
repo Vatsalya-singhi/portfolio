@@ -80,7 +80,7 @@ const Testimonials = () => {
                                 <figure key={index} className="flex flex-col items-center justify-center px-3 py-4 text-center bg-zinc rounded-lg h-full">
 
                                     <figcaption className="flex items-center justify-center mb-3">
-                                        <img className="rounded-full w-9 h-9" src={image} alt="profile picture" title={name} />
+                                        <img className="rounded-full w-9 h-9" src={image} alt="profile picture" title={name} loading="lazy" />
                                         <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
                                             <div className="capitalize">{name}</div>
                                             <div className="text-sm text-gray-500 dark:text-gray-400 capitalize">{position}</div>
