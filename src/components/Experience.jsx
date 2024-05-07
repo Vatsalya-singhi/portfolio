@@ -29,7 +29,7 @@ const Experience = () => {
         {
             company: "CanGo Networks (Now Viavi Solutions)",
             role: "Software Engineer",
-            location: "Chennai",
+            location: "Chennai, India",
             link: "https://www.linkedin.com/company/cango-networks/",
             date: "September 2020",
             description: "Engineered robust cross-platform mobile apps with native functionalities to accelerate data collection, processing, and analysis, while optimizing telecom operators processes. Developed interactive web applications in Angular to deliver comprehensive network analytics to clients. Instrumental in creating a scan and tag app used by about 500 on-ground staff, leading to a 10x reduction in process time and awarded for it.",
@@ -38,7 +38,7 @@ const Experience = () => {
         {
             company: "Gethu Games",
             role: "Software Engineer",
-            location: "Chennai",
+            location: "Chennai, India",
             link: "https://www.linkedin.com/company/gethu-games/",
             date: "September 2018",
             description: "Proficiently designed and developed both web and mobile applications, leveraging expertise in Angular, Ionic, Express.js, and Google Firebase. Implemented TypeScript resulting in a 30% reduction in bug incidents and enhancing code maintainability. Demonstrated ability to navigate multiple concurrent projects, ensuring timely delivery and collaborative success. Additionally, contributed to research-oriented initiatives and research projects, evaluating product viability and innovation potential.",

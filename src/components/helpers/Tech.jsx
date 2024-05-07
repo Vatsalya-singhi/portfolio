@@ -57,33 +57,16 @@ const Tech = () => {
                 <span>Tech Arsenal</span>
             </h3>
 
-            {/* <div className="my-4 gap-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-60 overflow-scroll no-scrollbar">
-                {
-                    techList.map(({ tech, expertise, color, icon }, index) => (
-                        <div key={index}>
-                            <div className="flex justify-between mb-1">
-                                <span className="text-base font-medium text-blue-700 dark:text-white capitalize">{tech}</span>
-                                <span className="text-sm font-medium text-blue-700 dark:text-white">{expertise}%</span>
-                            </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                                <div className="bg-white h-2.5 rounded-full" style={{ width: `${expertise}%` }}></div>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div> */}
-
-
             <>
                 <div className="mb-4">
-                    <ul className="flex flex-wrap text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" data-tabs-active-classes="text-white" data-tabs-inactive-classes="text-gray">
+                    <ul className="text-sm font-medium text-left whitespace-nowrap overflow-x-auto overflow-y-hidden" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" data-tabs-active-classes="text-white" data-tabs-inactive-classes="text-gray">
                         {
                             Object.keys(techList).map((type, index) => {
                                 let str = type.replace(/\s+/g, '');
                                 return (
-                                    <li key={index} className="me-2" role="presentation">
+                                    <li key={index} className="me-2 inline" role="presentation">
                                         <button
-                                            className={`inline-block p-4 border-b-2 rounded-t-lg capitalize ${index == 0 ? "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" : ""}`}
+                                            className={`inline-block p-4 rounded-t-lg capitalize hover:text-white hover:border-gray-300`}
                                             id={`${str}-tab`}
                                             data-tabs-target={`#${str}`}
                                             type="button"
