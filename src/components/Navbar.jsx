@@ -123,7 +123,6 @@ const Navbar = () => {
 
                             <div className="bg-black px-5 py-5">
                                 <div className="flex flex-col items-center justify-center sm:px-5">
-                                    {/* Close Modal Btn */}
                                     <div className="flex items-center justify-end w-full">
                                         <div className="cursor-pointer text-white transition-all my-3 mx-3" title="Close Menu" onClick={onToggleMenu} id="modal-title">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -131,7 +130,6 @@ const Navbar = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    {/* list of subsections */}
                                     <div className="text-center">
                                         <div className="w-full h-full flex flex-col justify-center">
                                             {navList.map(({ name, link, CustomIcon }, i) => (
@@ -147,7 +145,6 @@ const Navbar = () => {
                                 </div>
                             </div>
 
-                            {/* download resume */}
                             <div className="w-full flex justify-center py-5">
                                 <button type="button" className="flex items-center justify-center rounded-md text-xl font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 px-5 py-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
