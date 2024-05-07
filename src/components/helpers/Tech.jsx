@@ -8,41 +8,41 @@ const Tech = () => {
 
     const techList = {
         "Frameworks": [
-            { "tech": "Angular", "expertise": "80" },
-            { "tech": "React", "expertise": "70" },
-            { "tech": "Ionic", "expertise": "70" },
+            { "tech": "Angular", "expertise": "75" },
+            { "tech": "React", "expertise": "60" },
+            { "tech": "Ionic", "expertise": "75" },
             { "tech": "Django", "expertise": "70" },
-            { "tech": "Spring Boot", "expertise": "70" },
-            { "tech": "Express.js", "expertise": "70" }
+            { "tech": "Spring Boot", "expertise": "50" },
+            { "tech": "Express.js", "expertise": "80" }
         ],
         "Frontend": [
-            { "tech": "Angular", "expertise": "80" },
-            { "tech": "React", "expertise": "70" },
-            { "tech": "Ionic", "expertise": "70" },
+            { "tech": "Angular", "expertise": "75" },
+            { "tech": "React", "expertise": "60" },
+            { "tech": "Ionic", "expertise": "75" },
             { "tech": "Tailwind CSS", "expertise": "70" },
-            { "tech": "Material UI", "expertise": "70" },
-            { "tech": "Bootstrap", "expertise": "70" }
+            { "tech": "Material UI", "expertise": "80" },
+            { "tech": "Bootstrap", "expertise": "80" }
         ],
         "Backend": [
-            { "tech": "Express.js", "expertise": "70" },
+            { "tech": "Express.js", "expertise": "80" },
             { "tech": "Django", "expertise": "70" },
-            { "tech": "Spring Boot", "expertise": "70" }
+            { "tech": "Spring Boot", "expertise": "50" }
         ],
         "Database Management": [
             { "tech": "MySQL", "expertise": "70" },
             { "tech": "MongoDB", "expertise": "70" },
-            { "tech": "Redis", "expertise": "70" },
-            { "tech": "Firebase", "expertise": "70" }
+            { "tech": "Redis", "expertise": "60" },
+            { "tech": "Firebase", "expertise": "80" }
         ],
         "Protocols": [
-            { "tech": "WebSockets", "expertise": "70" },
-            { "tech": "WebRTC", "expertise": "70" },
+            { "tech": "WebSockets", "expertise": "80" },
+            { "tech": "WebRTC", "expertise": "80" },
             { "tech": "MQTT", "expertise": "70" },
             { "tech": "Kafka", "expertise": "70" }
         ],
         "Containerization": [
-            { "tech": "Docker", "expertise": "70" },
-            { "tech": "Kubernetes", "expertise": "70" }
+            { "tech": "Docker", "expertise": "60" },
+            { "tech": "Kubernetes", "expertise": "40" }
         ]
     };
 
@@ -98,7 +98,7 @@ const Tech = () => {
                                         arr.map(({ tech, expertise }) => (
                                             <div key={tech}>
                                                 <div className="flex justify-between mb-1">
-                                                    <span className="text-base font-medium text-blue-700 dark:text-white capitalize" title={tech}>{tech}</span>
+                                                    <span className="text-base font-medium text-blue-700 dark:text-white" title={tech}>{tech}</span>
                                                     <span className="text-sm font-medium text-blue-700 dark:text-white">{expertise}%</span>
                                                 </div>
                                                 <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
