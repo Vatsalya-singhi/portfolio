@@ -118,11 +118,12 @@ const Navbar = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-100 transition-opacity"></div>
 
                 <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                    <div className="flex min-h-full items-center justify-center text-center">
-                        <div className="relative transform overflow-hidden rounded-lg bg-black text-left shadow-xl transition-all my-8 w-full h-full">
+                    <div className="min-h-full flex-center">
+                        <div className="relative transform overflow-hidden rounded-lg bg-black transition-all w-full">
 
-                            <div className="bg-black px-5 py-5">
+                            <div className="bg-black min-xs:px-5 py-5">
                                 <div className="flex flex-col items-center justify-center sm:px-5">
+                                    {/* close button */}
                                     <div className="flex items-center justify-end w-full">
                                         <div className="cursor-pointer text-white transition-all my-3 mx-3" title="Close Menu" onClick={onToggleMenu} id="modal-title">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -130,23 +131,23 @@ const Navbar = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <div className="text-center">
-                                        <div className="w-full h-full flex flex-col justify-center">
-                                            {navList.map(({ name, link, CustomIcon }, i) => (
-                                                <div key={name} title={name} onClick={onToggleMenu} className="w-full flex items-center justify-self-stretch gap-7 px-2 py-2.5 text-xl cursor-pointer text-white transition-all">
-                                                    <a href={`${link}`}>
-                                                        <CustomIcon />
-                                                        <p className="text-justify">{name}</p>
-                                                    </a>
-                                                </div>
-                                            ))}
-                                        </div>
+                                    {/* menu list */}
+                                    <div className="flex-center flex-col">
+                                        {navList.map(({ name, link, CustomIcon }, i) => (
+                                            <div key={name} title={name} onClick={onToggleMenu}
+                                                className="px-2 py-3.5 text-xl cursor-pointer transition-all w-full">
+                                                <a className="flex gap-3" href={`${link}`}>
+                                                    <CustomIcon />
+                                                    <p className="text-white ml-2">{name}</p>
+                                                </a>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="w-full flex justify-center py-5">
-                                <button type="button" className="flex items-center justify-center rounded-md text-xl font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 px-5 py-2">
+                            <div className="flex-center">
+                                <button type="button" className="flex-center rounded-md text-xl font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 px-5 py-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                     </svg>

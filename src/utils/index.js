@@ -15,6 +15,11 @@ import images4IMG from "/assets/images/image-4.jpg";
 
 import project1IMG from "/assets/images/project1.webp";
 import chatGPTIMG from "/assets/images/chatgpt.svg";
+import codeEditorIMG from "/assets/images/codeeditor.jpg";
+import umlDiagramIMG from "/assets/images/umldiagram.jpg";
+import smartIOTIMG from "/assets/images/smartiot.jpg";
+import youtubeIMG from "/assets/images/youtube.jpg";
+
 
 import replay from "/assets/images/replay.svg";
 import play from "/assets/images/play.svg";
@@ -36,6 +41,10 @@ export const no_avatar = no_avatarIMG;
 export const images4 = images4IMG;
 export const project1 = project1IMG;
 export const chatGPT = chatGPTIMG;
+export const codeEditor = codeEditorIMG;
+export const umlDiagram = umlDiagramIMG;
+export const smartIOT = smartIOTIMG;
+export const youtube = youtubeIMG;
 
 
 export const replayImg = replay;
