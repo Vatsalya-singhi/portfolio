@@ -141,7 +141,8 @@ canvas {
   }
 
   .video-carousel_container {
-    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
+    /* @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]; */
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[40vh] sm:h-[50vh] h-[50vh];
   }
 
   .g_fadeIn {

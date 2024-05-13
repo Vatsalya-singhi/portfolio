@@ -11,6 +11,15 @@ import herobg3IMG from "/assets/images/hero-bg-3.jpg";
 import aboutMeIMG from "/assets/images/aboutme.png";
 import no_avatarIMG from "/assets/images/no_avatar.svg";
 
+import images4IMG from "/assets/images/image-4.jpg";
+
+import project1IMG from "/assets/images/project1.webp";
+import chatGPTIMG from "/assets/images/chatgpt.svg";
+
+import replay from "/assets/images/replay.svg";
+import play from "/assets/images/play.svg";
+import pause from "/assets/images/pause.svg";
+
 export const icon = iconIMG;
 export const header_icon = header_iconIMG;
 export const hamburger = barIMG;
@@ -23,3 +32,12 @@ export const herobg3 = herobg3IMG;
 export const aboutmebg = aboutMeIMG;
 
 export const no_avatar = no_avatarIMG;
+
+export const images4 = images4IMG;
+export const project1 = project1IMG;
+export const chatGPT = chatGPTIMG;
+
+
+export const replayImg = replay;
+export const playImg = play;
+export const pauseImg = pause;
