@@ -16,7 +16,7 @@ const Projects = () => {
             photo: project1,
             link: "https://vatsalya-singhi4316.medium.com/webrtc-application-with-virtual-board-integration-using-ionic-fc7f2855d66f",
             specs: [],
-            colspan: 5,
+            colspan: 6,
         },
         {
             name: "VSChatGPT",
@@ -24,7 +24,7 @@ const Projects = () => {
             photo: codeEditor,
             link: "https://github.com/Vatsalya-singhi/vsopenai",
             specs: [],
-            colspan: 5,
+            colspan: 6,
         },
         {
             name: "UML Diagram Builder using y.js",
@@ -32,7 +32,7 @@ const Projects = () => {
             photo: umlDiagram,
             link: "https://github.com/Vatsalya-singhi/collaborative-UML-diagram",
             specs: [],
-            colspan: 7,
+            colspan: 6,
         },
         {
             name: "Smart Light Management using Pinecone BL602",
@@ -66,9 +66,9 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-12 gap-10 p-3">
+            <div className="grid grid-cols-12 p-3">
                 {projectList.map(({ name, description, photo, link, specs, colspan }, index) => (
-                    <div key={index} className={`rounded-xl col-span-12 flex-center`}>
+                    <div key={index} className={`rounded-xl col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-${colspan} xl:col-span-${colspan} 2xl:col-span-${colspan} flex-center py-5 px-5`}>
                         <div className="h-fit w-screen flex-center">
                             {/* card */}
                             <a key={index} href={link} target="_blank" className="w-full h-full flex flex-col items-center border rounded-lg shadow md:flex-row md:max-w-lg bg-zinc hover:bg-gray-800 border-gray-700">
