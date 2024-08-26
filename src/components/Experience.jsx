@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import { ErrorBoundary } from "react-error-boundary";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-
-
 
 const Experience = () => {
 
@@ -27,7 +26,7 @@ const Experience = () => {
             skillTags: ["React", "Tailwind CSS", "Chart.js", "React Testing Library"],
         },
         {
-            company: "CanGo Networks (Now Viavi Solutions)",
+            company: "CanGo Networks",
             role: "Software Engineer",
             location: "Chennai, India",
             link: "https://www.linkedin.com/company/cango-networks/",
@@ -52,83 +51,70 @@ const Experience = () => {
     }, [])
 
     return (
-        <>
-            {/*
-            <section id="Experience" className="w-screen overflow-hidden h-full common-padding bg-black">
-                <div className="screen-max-width">
-                    <div className="mb-12 w-full md:flex items-end justify-between">
-                        <h1 id="title" className="section-heading">Experience</h1>
-                        <div className="flex flex-wrap items-end gap-5">
-                            <p className="link ml-2">
-                                Watch the film
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            */}
-
-            <section id="Experience" className="w-screen overflow-hidden h-full common-padding bg-black">
+        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+            <section id="Experience" className="w-screen common-padding h-full bg-black">
                 <div className="screen-max-width">
 
-                    <div className="mb-12 w-full md:flex items-end justify-between">
-                        <div className="flex flex-col items-center md:items-start pt-10 lg:px-16 md:px-4 sm:px-10">
-                            <p className="link text-white text-5xl uppercase md:tracking-widest roboto-slab-name underline underline-offset-4 decoration-2 decoration-white-500">
+                    <div className="lg:px-16 md:px-4 sm:px-10">
+                        {/* header */}
+                        <div className="flex flex-col items-center md:items-start mb-12 pt-10">
+                            <p className="text-white text-5xl uppercase md:tracking-widest roboto-slab-name underline underline-offset-4 decoration-2 decoration-white-500">
                                 Experience
                             </p>
-                            <p className="link text-white capitalize text-pretty md:text-balance text-center pt-0.5">
+                            <p className="text-white text-pretty md:text-balance text-center pt-0.5">
                                 Art of Software Alchemy
                             </p>
                         </div>
-                    </div>
-
-                    <div className="flex-1 flex items-center justify-center lg:px-16 md:px-4 sm:px-10">
-                        <ol className="relative border-s border-gray-200 dark:border-gray-700 sm:pr-10 pr-10">
-                            {ExperienceList.map(({ company, role, location, link, date, description, skillTags }, index) => (
-                                <li key={index}
-                                    className={`w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ms-6 ${(index == ExperienceList.length - 1) ? "mb-1" : "mb-5"}`}>
-                                    <span className="absolute flex items-center justify-center w-6 h-6 bg-white-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-white-900 bg-black">
-                                        <svg className="w-2.5 h-2.5 text-white-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                        </svg>
-                                    </span>
-                                    <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
-                                        {role}
-                                        {
-                                            index == 0 &&
-                                            (<span className="ms-3 px-1 bg-white-100 text-white-800 text-sm font-medium rounded text-white leading-7">
-                                                (Present)
-                                            </span>)
-                                        }
-                                    </h3>
-                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{company} · {date}</time>
-                                    <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
-                                    <p className="mb-4 text-base font-normal text-gray-500">{description}</p>
-                                    <div className="max-sm:hidden">
-                                        {
-                                            skillTags.map((skill, index) => (
-                                                <a key={index} href="#"
-                                                    className="mr-4 mb-2 px-4 py-2 inline-flex items-center text-sm font-medium 
-                                                border 
-                                                rounded-lg 
-                                                hover:text-white-700 
-                                                focus:z-10 focus:ring-4 focus:outline-none focus:text-white-700
-                                                bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700">
+                        {/* content */}
+                        <div className="flex-center">
+                            <ol className="relative border-s border-gray-200 dark:border-gray-700 sm:pr-10 pr-10">
+                                {ExperienceList.map(({ company, role, location, link, date, description, skillTags }, index) => (
+                                    <li key={index}
+                                        className={`w-full rounded bg-zinc hover:bg-gray-800 px-4 py-2 ms-6 ${(index == ExperienceList.length - 1) ? "mb-1" : "mb-5"}`}>
+                                        <span className="absolute flex-center w-6 h-6 bg-white-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-white-900 bg-black">
+                                            <svg className="w-2.5 h-2.5 text-white-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                            </svg>
+                                        </span>
+                                        {/* role */}
+                                        <p className="text-lg font-semibold">{role}</p>
+                                        {/* company startdate enddate */}
+                                        <time className="flex flex-wrap items-center mb-2 text-sm font-normal leading-none text-gray-500">
+                                            <a className="hover:underline" href={link} target="_blank">
+                                                {company}
+                                            </a>
+                                            <span className="mx-1 font-black text-2xl"> · </span>
+                                            <span> {date}  {index == 0 && (<span> - (Present)</span>)} </span>
+                                        </time>
+                                        {/* location */}
+                                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
+                                        {/* description */}
+                                        <p className="mb-4 text-wrap text-base font-normal text-gray-500">{description}</p>
+                                        {/* skill list */}
+                                        <div className="max-sm:hidden">
+                                            {skillTags.map((skill) => (
+                                                <div
+                                                    key={skill}
+                                                    className="mr-4 mb-2 px-4 py-2 inline-flex items-center
+                                                    text-sm font-medium 
+                                                    border 
+                                                    rounded-lg 
+                                                    hover:text-white-700 
+                                                    focus:z-10 focus:ring-4 focus:outline-none focus:text-white-700
+                                                    bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700">
                                                     {skill}
-                                                </a>
-                                            ))
-                                        }
-                                    </div>
-                                </li>
-                            ))}
-                        </ol>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
                     </div>
-
-
                 </div>
 
             </section>
-        </>
+        </ErrorBoundary>
     )
 }
 

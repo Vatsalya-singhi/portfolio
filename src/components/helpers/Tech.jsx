@@ -46,6 +46,11 @@ const Tech = () => {
         ]
     };
 
+    const [currentTab, setCurrentTab] = useState(0);
+    const onTabClick = (index) => {
+        setCurrentTab(index);
+    }
+
     return (
         <div id="Tech" className="w-full p-4 rounded-lg shadow sm:p-6 border-gray-200 dark:border-gray-700 bg-black">
 
@@ -57,20 +62,23 @@ const Tech = () => {
             </h3>
 
             <div className="mb-0">
-                <ul className="text-sm font-medium text-left whitespace-nowrap overflow-x-auto overflow-y-hidden" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" data-tabs-active-classes="text-white" data-tabs-inactive-classes="text-gray">
+                <ul className="tech-section text-sm font-medium text-left whitespace-nowrap overflow-x-auto overflow-y-hidden"
+                    id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist"
+                    data-tabs-active-classes="text-white" data-tabs-inactive-classes="text-gray">
                     {
                         Object.keys(techList).map((type, index) => {
                             let str = type.replace(/\s+/g, '');
                             return (
                                 <li key={index} className="me-2 inline" role="presentation">
                                     <button
-                                        className={`inline-block p-4 rounded-t-lg capitalize hover:text-white hover:border-gray-300`}
+                                        className={`inline-block p-4 rounded-t-lg capitalize ${index == currentTab ? 'text-white border-b-2 border-b-white' : 'text-gray hover:text-white'}`}
                                         id={`${str}-tab`}
                                         data-tabs-target={`#${str}`}
                                         type="button"
                                         role="tab"
                                         aria-controls={`${str}`}
-                                        aria-selected={`${index == 0}`}
+                                        aria-selected={`${index == currentTab}`}
+                                        onClick={() => onTabClick(index)}
                                     >
                                         {type}
                                     </button>
@@ -81,6 +89,7 @@ const Tech = () => {
 
                 </ul>
             </div>
+
             <div id="default-tab-content">
                 {
                     Object.keys(techList).map((type, index) => {
@@ -88,7 +97,7 @@ const Tech = () => {
                         let arr = techList[type];
                         return (
                             <div key={index}
-                                className="hidden p-4 rounded-lg bg-zinc"
+                                className={'p-4 rounded-lg bg-zinc ' + (currentTab == index ? '' : ' hidden')}
                                 id={`${str}`}
                                 role="tabpanel"
                                 aria-labelledby={`${str}-tab`}
@@ -114,9 +123,7 @@ const Tech = () => {
                         )
                     })
                 }
-
             </div>
-
         </div>
     )
 

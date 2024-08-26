@@ -9,7 +9,7 @@ const Education = () => {
     const EducationList = [
         {
             college: "Schmalkalden Univerity of Applied Science",
-            degree: "MSc in Applied Computer Science",
+            degree: "Master's in Applied Computer Science",
             location: "Schmalkalden, Germany",
             link: "https://www.hs-schmalkalden.de/en/studying/programmes/master-degree-courses/applied-computer-science-msc",
             fromDate: "2021",
@@ -42,8 +42,10 @@ const Education = () => {
                         <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
                             {degree}
                         </h3>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{college}</time>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{fromDate} · {toDate}</time>
+                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">
+                            <a className="hover:underline" href={link} target="_blank">{college}</a>
+                        </time>
+                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{fromDate} - {toDate}</time>
                         <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
                     </li>
                 ))}

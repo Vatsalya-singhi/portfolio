@@ -32,33 +32,28 @@ const Testimonials = () => {
             image: "https://media.licdn.com/dms/image/D5603AQGt5fjhuvBlBg/profile-displayphoto-shrink_100_100/0/1679606091635?e=1720051200&v=beta&t=Hjrd4fF1kSYr9ULvad8bYCoKOFrcj-R9TBha10Amr_k",
             message: "It's rare that you come across standout talent like Vatsalya. He expertly filled the role of a mentor in Machine Learning, IoT and PHP for our team's growth for over 2 years. I was always in awe of his ability to bring up new ideas in any public meetings and also command a room and get people on board with their ideas. No matter how hard a meeting goes, he made sure that everyone left with a happy mind. As a team member or a leader, Vatsalya earns my highest recommendation.",
         },
-    ]
+    ];
 
-    var swiper = new Swiper(".centered-slide-carousel", {
-        centeredSlides: true,
-        paginationClickable: true,
-        loop: true,
-        spaceBetween: 30,
-        slideToClickedSlide: true,
-        pagination: {
-            el: ".centered-slide-carousel .swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            1920: {
-                slidesPerView: 4,
-                spaceBetween: 30
-            },
-            1028: {
-                slidesPerView: 2,
-                spaceBetween: 10
-            },
-            990: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            }
-        }
-    });
+
+    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+    const onBtnClick = (index) => {
+        setCurrentTestimonial(index);
+    };
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentTestimonial((prevIndex) => {
+                return prevIndex === 2 ? 0 : prevIndex + 1;
+            });
+        }, 3000);
+        return () => clearInterval(intervalId);
+    }, []);
+
+    const getCarouselClasses = (index) => {
+        if (index === currentTestimonial) return 'z-20 translate-x-0 z-30';
+        if (index === (currentTestimonial === 2 ? 0 : currentTestimonial + 1)) return 'z-10 translate-x-full z-20';
+        return 'z-30 -translate-x-full z-10';
+    };
 
     return (
 
@@ -76,7 +71,9 @@ const Testimonials = () => {
                 <div className="relative h-96 overflow-hidden rounded-lg">
                     {
                         testimonialList.map(({ name, position, date, message, image }, index) => (
-                            <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">
+                            <div key={name}
+                                className={`duration-700 ease-in-out absolute inset-0 transition-transform transform ${getCarouselClasses(index)} `}
+                                data-carousel-item>
                                 <figure key={index} className="flex flex-col items-center justify-center px-3 py-4 text-center bg-zinc rounded-lg h-full">
 
                                     <figcaption className="flex items-center justify-center mb-3">
@@ -101,8 +98,11 @@ const Testimonials = () => {
                 {/* Slider indicators */}
                 <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                     {
-                        testimonialList.map((obj, index) => (
-                            <button key={index} type="button" className="w-3 h-3 rounded-full" aria-current={`${index == 0}`} aria-label={`Slide ${index + 1}`} data-carousel-slide-to={`${index}`} />
+                        testimonialList.map(({ name, position, date, message, image }, index) => (
+                            <button key={name} type="button"
+                                className={`w-3 h-3 rounded-full ${index == currentTestimonial ? 'bg-white' : 'bg-gray'}`}
+                                aria-current={`${index == currentTestimonial}`} aria-label={`Slide ${index + 1}`}
+                                data-carousel-slide-to={`${index}`} onClick={() => onBtnClick(index)} />
                         ))
                     }
                 </div>

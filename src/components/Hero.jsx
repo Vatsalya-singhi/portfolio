@@ -18,34 +18,30 @@ const Hero = () => {
     }
 
     return (
-        <section className="w-full nav-height bg-black relative screen-max-width">
+        <section id="hero" className="nav-height">
 
-            <div className="h-5/6 w-full rounded-lg flex items-center justify-center md:justify-start max-md:px-5
-            bg-cover bg-no-repeat bg-center max-md:bg-none"
-                style={{ backgroundImage: `url(${herobg2})`, backgroundColor: `rgba(0,0,0,0.55)`, backgroundBlendMode: 'darken', }}
+            <div className="h-5/6 flex-center bg-cover bg-no-repeat bg-center"
+                style={{ backgroundImage: `url(${herobg2})`, backgroundColor: `rgba(0,0,0,0.55)`, backgroundBlendMode: 'darken' }}
             >
 
-                <div className="flex flex-col w-full md:w-1/2">
+                <div className="screen-max-width flex flex-col w-full sm:w-1/2 md:w-2/3 lg:w-1/2">
                     <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20 p-0 max-sm:p-3 rounded-lg">
                         <p className="text-white text-5xl uppercase md:tracking-widest roboto-slab-name">Vatsalya</p>
                         <p className="text-white text-5xl uppercase md:tracking-widest font-black roboto-slab-name">Singhi</p>
                         <p className="text-white text-xl capitalize md:tracking-widest md:leading-loose">
                             Full Stack Software Engineer
                         </p>
-                    </div>
-
-                    {/* <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20 p-0 max-sm:p-3 rounded-lg">
                         <p className="text-white text-pretty md:text-balance text-center">
                             Passionate Full Stack Developer crafting clean, impactful software solutions from concept to deployment, with a knack for robust, clean code.
                         </p>
-                    </div> */}
+                    </div>
                 </div>
 
             </div>
 
-            <div id="footer" className="flex flex-col items-center justify-center opacity-0 pt-3">
-                <p className="roboto-slab-name cursor-pointer" onClick={() => scrollToForm("#AboutMe")}>Know More</p>
-                <div className="text-white pt-1.5 cursor-pointer" onClick={() => scrollToForm("#AboutMe")}>
+            <div id="footer" className="opacity-0 pt-3">    
+                <div className="flex-center flex-col text-white pt-1.5 cursor-pointer" onClick={() => scrollToForm("#AboutMe")}>
+                    <p className="roboto-slab-name">Know More</p>
                     <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
