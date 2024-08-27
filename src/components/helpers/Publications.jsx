@@ -32,14 +32,15 @@ const Publications = () => {
 
             <ul className="my-4">
                 {researchList.map(({ title, link, year, short }, index) => (
-                    <li key={index}
-                        className={`w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ${(index == researchList.length - 1) ? "mb-1" : "mb-5"}`}>
-                        <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
-                            {title}
-                        </h3>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{year}</time>
-                        <time className="block mb-2 text-sm font-normal leading-normal text-left text-gray-500" title={short}>{short}</time>
-                    </li>
+                    <a key={index} href={link} target="_blank">
+                        <li className={`cursor-pointer w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ${(index == researchList.length - 1) ? "mb-1" : "mb-5"}`}>
+                            <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
+                                {title}
+                            </h3>
+                            <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{year}</time>
+                            <time className="block mb-2 text-sm font-normal leading-normal text-left text-gray-500" title={short}>{short}</time>
+                        </li>
+                    </a>
                 ))}
             </ul>
 

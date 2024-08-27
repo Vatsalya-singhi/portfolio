@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { aboutmebg } from '../../utils';
 // Education - gallery of cards with dot based nav and auto scroll
 const Education = () => {
 
@@ -37,17 +36,14 @@ const Education = () => {
 
             <ul className="my-4">
                 {EducationList.map(({ college, degree, location, link, fromDate, toDate }, index) => (
-                    <li key={index}
-                        className={`w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ${(index == EducationList.length - 1) ? "mb-1" : "mb-5"}`}>
-                        <h3 className="flex items-center mb-1 text-lg font-semibold text-white">
-                            {degree}
-                        </h3>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">
-                            <a className="hover:underline" href={link} target="_blank">{college}</a>
-                        </time>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{fromDate} - {toDate}</time>
-                        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
-                    </li>
+                    <a key={index} href={link} target="_blank">
+                        <li className={`cursor-pointer w-full h-full rounded overflow-hidden bg-zinc hover:bg-gray-800 px-4 py-2 ${(index == EducationList.length - 1) ? "mb-1" : "mb-5"}`}>
+                            <h3 className="flex items-center mb-1 text-lg font-semibold text-white">{degree}</h3>
+                            <time className="cursor-pointer block mb-2 text-sm font-normal leading-none text-gray-500">{college}</time>
+                            <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{fromDate} - {toDate}</time>
+                            <time className="block mb-2 text-sm font-normal leading-none text-gray-500">{location}</time>
+                        </li>
+                    </a>
                 ))}
             </ul>
 

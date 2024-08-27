@@ -1,52 +1,25 @@
-import iconIMG from "/assets/images/icon.svg"
-import header_iconIMG from "/assets/images/header_icon.svg"
-import barIMG from "/assets/images/bars-4.svg"
+import hero_section_IMAGE from '/assets/images/hero_section.jpg';
+import about_me_IMAGE from "/assets/images/about_me.png";
 
-import herobgIMG from "/assets/images/hero-bg.jpg";
-import herobg1IMG from "/assets/images/hero-bg-1.jpg";
-import herobg2IMG from "/assets/images/hero-bg-2.jpg";
-import herobg3IMG from "/assets/images/hero-bg-3.jpg";
+import G_Surendar_Thina_IMAGE from "/assets/images/G_Surendar_Thina.jpeg";
+import Saiyasodharan_R_IMAGE from "/assets/images/Saiyasodharan_R.svg";
+import saravanan_mani_IMAGE from "/assets/images/saravanan_mani.jpeg";
 
-// import aboutMeIMG from "/assets/images/aboutme.jpg";
-import aboutMeIMG from "/assets/images/aboutme.png";
-import no_avatarIMG from "/assets/images/no_avatar.svg";
+import collaborative_uml_diagram_IMAGE from "/assets/images/collaborative_uml_diagram.webp";
+import vschatgpt_IMAGE from "/assets/images/vschatgpt.jpg";
+import uml_diagram_using_yjs_IMAGE from "/assets/images/uml_diagram_using_yjs.jpg";
+import smart_light_management_IMAGE from "/assets/images/smart_light_management.jpg";
+import youtube_ad_accelerator_IMAGE from "/assets/images/youtube_ad_accelerator.jpg";
 
-import images4IMG from "/assets/images/image-4.jpg";
+export const hero_section = hero_section_IMAGE;
+export const about_me = about_me_IMAGE;
 
-import project1IMG from "/assets/images/project1.webp";
-import chatGPTIMG from "/assets/images/chatgpt.svg";
-import codeEditorIMG from "/assets/images/codeeditor.jpg";
-import umlDiagramIMG from "/assets/images/umldiagram.jpg";
-import smartIOTIMG from "/assets/images/smartiot.jpg";
-import youtubeIMG from "/assets/images/youtube.jpg";
+export const G_Surendar_Thina = G_Surendar_Thina_IMAGE;
+export const Saiyasodharan_R = Saiyasodharan_R_IMAGE;
+export const saravanan_mani = saravanan_mani_IMAGE;
 
-
-import replay from "/assets/images/replay.svg";
-import play from "/assets/images/play.svg";
-import pause from "/assets/images/pause.svg";
-
-export const icon = iconIMG;
-export const header_icon = header_iconIMG;
-export const hamburger = barIMG;
-
-export const herobg = herobgIMG;
-export const herobg1 = herobg1IMG;
-export const herobg2 = herobg2IMG;
-export const herobg3 = herobg3IMG;
-
-export const aboutmebg = aboutMeIMG;
-
-export const no_avatar = no_avatarIMG;
-
-export const images4 = images4IMG;
-export const project1 = project1IMG;
-export const chatGPT = chatGPTIMG;
-export const codeEditor = codeEditorIMG;
-export const umlDiagram = umlDiagramIMG;
-export const smartIOT = smartIOTIMG;
-export const youtube = youtubeIMG;
-
-
-export const replayImg = replay;
-export const playImg = play;
-export const pauseImg = pause;
+export const collaborative_uml_diagram = collaborative_uml_diagram_IMAGE;
+export const vschatgpt = vschatgpt_IMAGE;
+export const uml_diagram_using_yjs = uml_diagram_using_yjs_IMAGE;
+export const smart_light_management = smart_light_management_IMAGE;
+export const youtube_ad_accelerator = youtube_ad_accelerator_IMAGE;

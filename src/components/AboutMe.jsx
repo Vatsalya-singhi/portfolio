@@ -4,7 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { aboutmebg } from '../utils';
+import { about_me } from '../utils';
 
 
 const AboutMe = () => {
@@ -42,12 +42,12 @@ const AboutMe = () => {
                             {/* right content */}
                             {/* > tablet screen */}
                             <div className="hidden md:block h-[500px] w-[500px] bg-contain bg-no-repeat bg-center self-center"
-                                style={{ backgroundImage: `url(${aboutmebg})` }}>
+                                style={{ backgroundImage: `url(${about_me})` }}>
                             </div>
 
                             {/* =< tablet screen */}
                             <div className="hidden max-md:block w-56 h-56 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 bg-contain bg-no-repeat bg-center self-center"
-                                style={{ backgroundImage: `url(${aboutmebg})` }}>
+                                style={{ backgroundImage: `url(${about_me})` }}>
                             </div>
 
                         </div>

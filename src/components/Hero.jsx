@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { herobg2 } from '../utils';
+import { hero_section } from '../utils';
 
 const Hero = () => {
 
@@ -21,7 +21,7 @@ const Hero = () => {
         <section id="hero" className="nav-height">
 
             <div className="h-5/6 flex-center bg-cover bg-no-repeat bg-center"
-                style={{ backgroundImage: `url(${herobg2})`, backgroundColor: `rgba(0,0,0,0.55)`, backgroundBlendMode: 'darken' }}
+                style={{ backgroundImage: `url(${hero_section})`, backgroundColor: `rgba(0,0,0,0.55)`, backgroundBlendMode: 'darken' }}
             >
 
                 <div className="screen-max-width flex flex-col w-full sm:w-1/2 md:w-2/3 lg:w-1/2">

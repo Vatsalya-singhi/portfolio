@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-import { project1, codeEditor, umlDiagram, smartIOT, youtube } from '../utils';
+import { collaborative_uml_diagram, vschatgpt, uml_diagram_using_yjs, smart_light_management, youtube_ad_accelerator } from '../utils';
 
 const Projects = () => {
 
@@ -14,7 +14,7 @@ const Projects = () => {
         {
             name: "WebRTC Application with Virtual Board integration",
             description: "Building a video call app integrated with a virtual board to interact and collaborate using Web Sockets and WebRTC.",
-            photo: project1,
+            photo: collaborative_uml_diagram,
             link: "https://vatsalya-singhi4316.medium.com/webrtc-application-with-virtual-board-integration-using-ionic-fc7f2855d66f",
             specs: [],
             colspan: 6,
@@ -22,7 +22,7 @@ const Projects = () => {
         {
             name: "VSChatGPT",
             description: "VSChatGPT is an extension for Visual Studio Code that integrates the OpenAI ChatGPT AI into VS Code editor.",
-            photo: codeEditor,
+            photo: vschatgpt,
             link: "https://github.com/Vatsalya-singhi/vsopenai",
             specs: [],
             colspan: 6,
@@ -30,7 +30,7 @@ const Projects = () => {
         {
             name: "UML Diagram Builder using y.js",
             description: "UML Diagram Builder using y.js",
-            photo: umlDiagram,
+            photo: uml_diagram_using_yjs,
             link: "https://github.com/Vatsalya-singhi/collaborative-UML-diagram",
             specs: [],
             colspan: 6,
@@ -38,7 +38,7 @@ const Projects = () => {
         {
             name: "Smart Light Management using Pinecone BL602",
             description: "Smart Light Management using Pinecone BL602",
-            photo: smartIOT,
+            photo: smart_light_management,
             link: "https://github.com/Vatsalya-singhi/smart-light-management-using-pinecone-bl602",
             specs: [],
             colspan: 6,
@@ -46,7 +46,7 @@ const Projects = () => {
         {
             name: "YouTube Ad Accelerator Chrome Extension",
             description: "The YouTube Ad Accelerator is designed to automate skipping ads, muting them and accelerating the playback rate of ad videos.",
-            photo: youtube,
+            photo: youtube_ad_accelerator,
             link: "https://github.com/Vatsalya-singhi/yt-ad-accelerator",
             specs: [],
             colspan: 6,
