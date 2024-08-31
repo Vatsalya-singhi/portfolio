@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ErrorBoundary } from "react-error-boundary";
 
 import gsap from 'gsap';
@@ -14,46 +14,38 @@ import Publications from './helpers/Publications';
 const BentoGrid = () => {
 
     return (
+        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+            <section id="BentoGrid" className="w-screen common-padding h-full bg-zinc">
 
-        <section id="Experience" className="w-screen overflow-hidden h-full common-padding bg-zinc">
-            <div className="screen-max-width">
+                <div className="screen-max-width">
 
-                <div className="grid grid-cols-12 gap-3 p-3">
-                    <div className="rounded-xl max-md:col-span-12 md:col-span-4">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                    <div className="grid grid-cols-12 gap-4 h-full">
+                        <div className="max-md:col-span-12 md:col-span-4">
                             <Education />
-                        </ErrorBoundary>
-                    </div>
-                    <div className="rounded-xl max-md:col-span-12 md:col-span-8">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                        </div>
+                        <div className="max-md:col-span-12 md:col-span-8">
                             <Tech />
-                        </ErrorBoundary>
-                    </div>
-                    <div className="rounded-xl h-fit max-md:col-span-12 md:col-span-7">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                        </div>
+                        <div className="max-md:col-span-12 md:col-span-7">
                             <Publications />
-                        </ErrorBoundary>
-                    </div>
-                    <div className="rounded-xl h-fit max-md:col-span-12 md:col-span-5">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                        </div>
+                        <div className="max-md:col-span-12 md:col-span-5">
                             <Languages />
-                        </ErrorBoundary>
-                    </div>
-                    <div className="rounded-xl h-fit max-md:col-span-12 md:col-span-5">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                        </div>
+                        <div className="max-md:col-span-12 md:col-span-5">
                             <Contact />
-                        </ErrorBoundary>
-                    </div>
-                    <div className="rounded-xl h-fit max-md:col-span-12 md:col-span-7">
-                        <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                        </div>
+                        <div className="max-md:col-span-12 md:col-span-7">
                             <Testimonials />
-                        </ErrorBoundary>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </ErrorBoundary>
+
     )
+
 }
 
 export default BentoGrid;
