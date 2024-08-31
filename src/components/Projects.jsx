@@ -77,7 +77,7 @@ const Projects = () => {
                                 {/* card */}
                                 <a key={index} href={link} target="_blank" className="w-full h-full flex flex-col items-center border rounded-lg shadow md:flex-row md:max-w-lg bg-zinc hover:bg-gray-800 border-gray-700">
                                     <img className="object-contain w-full rounded-t-lg md:w-64 md:rounded-none md:rounded-s-lg h-48 md:h-auto"
-                                        src={photo} alt="" loading="lazy" />
+                                        src={photo} />
                                     <div className="flex flex-col justify-between p-4 leading-normal">
                                         <h3 className="flex items-center mb-1 text-lg font-semibold text-white">{name}</h3>
                                         <time className="block mb-2 text-sm font-normal text-gray-500">{description}</time>
