@@ -98,7 +98,7 @@ const Tech = () => {
                             let arr = techList[type];
                             return (
                                 <div key={index}
-                                    className={'pt-4 rounded-lg ' + (currentTab == index ? '' : ' hidden')}
+                                    className={'p-4 rounded-lg shadow sm:p-6 ' + (currentTab == index ? '' : ' hidden')}
                                     id={`${str}`}
                                     role="tabpanel"
                                     aria-labelledby={`${str}-tab`}
