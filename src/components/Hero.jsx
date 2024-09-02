@@ -20,7 +20,7 @@ const Hero = () => {
     return (
         <section id="hero" className="nav-height">
 
-            <div className="h-5/6 flex-center bg-cover bg-no-repeat bg-center"
+            <div className="h-5/6 flex-center bg-cover bg-no-repeat bg-center bg-fixed"
                 style={{ backgroundImage: `url(${hero_section})`, backgroundColor: `rgba(0,0,0,0.55)`, backgroundBlendMode: 'darken' }}
             >
 
